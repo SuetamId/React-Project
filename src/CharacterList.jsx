@@ -29,10 +29,10 @@ const CharacterList = ({ characters }) => {
               </div>
             </div>
 
+
           ))}
 
       </div></>
-
 
   );
 };
