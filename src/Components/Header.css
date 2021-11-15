@@ -1,0 +1,39 @@
+header{
+    position:fixed;
+    display:flex ;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: 0;
+    display:flex ;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    background: transparent;
+   
+}
+.black{
+    background-color: #000;
+  
+}
+.logo{
+    height: 100px;
+    text-align: center;
+
+}
+img{
+    height: 100%;
+}
+input{
+   height: 30px;
+   background-color: rgb(75, 192, 186);
+   border-radius: 10px;
+   outline: none;
+   color: #fff;
+   width: 200px;
+   border-color: rgb(233, 233, 86);
+   position: fixed;
+   right: 110px;
+   margin-top: -75px;
+   z-index: 2;
+}
