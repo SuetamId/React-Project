@@ -1,22 +1,24 @@
+//imports 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Headers from "./Components/Headers";
 
 // components
-
-import CharacterList from "./CharacterList";
+import CharacterList from "./Components/CharacterList/CharacterList";
+import Headers from "./Components/Headers/Header";
 
 //style
 import "./App.css";
-import "./CharacterList.css";
-import "./Components/Header.css";
+import "./Components/CharacterList/CharacterList.css";
+import "./Components/Headers/Header.css";
 
+//main function
 function App() {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
   const url = "https://rickandmortyapi.com/api/character";
   const [blackHeader, setBlackHeader] = useState(false);
 
+  //fazendo aquisições na API com AXIOS
   const fetchCharacters = (url) => {
     axios
       .get(url)
@@ -28,11 +30,11 @@ function App() {
         console.log(error);
       });
   };
-
+  //função para lidar a paginação(next page)
   const handleNextPage = () => {
     fetchCharacters(info.next);
   };
-
+  //função para lidar a paginação(next page)
   const handlePreviousPage = () => {
     fetchCharacters(info.prev);
   };
@@ -41,24 +43,26 @@ function App() {
     fetchCharacters(url);
   }, []);
 
+  //função para controlar o header
   useEffect(() => {
     const scrollPage = () => {
-      if(window.scrollY > 10){
+      if (window.scrollY > 10) {
         setBlackHeader(true)
-      }else {
+      } else {
         setBlackHeader(false)
       }
     }
     window.addEventListener('scroll', scrollPage)
 
-    return () =>{
+    return () => {
       window.removeEventListener('scroll', scrollPage)
     }
   }, []);
 
+
   return (
     <div className="container py-5">
-      <Headers black={blackHeader}/>
+      <Headers black={blackHeader} />
       <CharacterList characters={characters} />
       <div className="container pb-5">
         <nav>
@@ -80,18 +84,15 @@ function App() {
           </ul>
         </nav>
       </div>
-      <footer >
-        <div className="footer"> 
-        <h1>By Mateus Henrique de Oliveira Silveira.</h1>
+      <footer>
+        <div className="footer">
+          <h1>By Mateus Henrique de Oliveira Silveira.</h1>
         </div>
- 
-</footer>;
+      </footer>
     </div>
-
   );
-
-
 }
 
-
 export default App;
+
+ 
