@@ -13,8 +13,10 @@ const CharacterList = ({ characters }) => {
         {characters.filter((value) => {
           if (search == "") {
             return value;
-          } else if (
+          }
+          else if (
             value.name.toLowerCase().includes(search.toLowerCase())
+
           ) {
             return value
           }

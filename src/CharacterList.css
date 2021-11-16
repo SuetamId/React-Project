@@ -1,7 +1,7 @@
 .container{
 
   margin-top: 110px;
-    text-align: center;
+  text-align: center;
     
 }
 .card{
@@ -12,6 +12,7 @@
      background-color: rgb(191, 192, 192);
      text-align: center;
      border-radius: 15px; 
+     opacity: 0.9;
   }
   .card-img-top{
     cursor: pointer;

@@ -10,6 +10,7 @@ header{
     display: inline-block;
     align-items: center;
     background: transparent;
+    
    
 }
 .black{
@@ -19,7 +20,7 @@ header{
 .logo{
     height: 100px;
     text-align: center;
-    
+
 
 }
 img{
