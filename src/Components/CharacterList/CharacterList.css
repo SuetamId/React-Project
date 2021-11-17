@@ -33,4 +33,16 @@ h5{
  h5{
     margin: 1px;
  }
-
+input{
+   height: 30px;
+   background-color: rgb(75, 192, 186);
+   border-radius: 10px;
+   outline: none;
+   color: #fff;
+   width: 200px;
+   border-color: rgb(233, 233, 86);
+   position: fixed;
+   right: 110px;
+   margin-top: -75px;
+   z-index: 2;
+}

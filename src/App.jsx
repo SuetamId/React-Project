@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
 // components
 import CharacterList from "./Components/CharacterList/CharacterList";
 import Headers from "./Components/Headers/Header";
@@ -58,7 +59,9 @@ function App() {
       window.removeEventListener('scroll', scrollPage)
     }
   }, []);
+  
 
+  
 
   return (
     <div className="container py-5">
