@@ -13,7 +13,7 @@ function Header({black}) {
     
           <div className="Favorite-character">
             <button>
-              Favoritos 
+              Favoritos
             </button>
           </div>
          
