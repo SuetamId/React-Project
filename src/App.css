@@ -1,40 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
-*{
+* {
   padding: 0;
   box-sizing: border-box;
 }
-body{
-background: url("../src/Components/img/backgroundImage/fundo.jpg");
-color:#000;
-padding: 0;
-font-family: 'Roboto', sans-serif;
-background-attachment: fixed;
+body {
+  background: url("../src/Components/img/backgroundImage/fundo.jpg");
+  color: #000;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-attachment: fixed;
 }
-.page-item { 
+.page-item {
   justify-content: space-between;
   display: inline-block;
   margin: 5px;
- 
 }
-button{
+button {
   width: 80px;
-  border-color:rgb(233, 233, 86) ;
+  border-color: rgb(233, 233, 86);
   background-color: rgb(75, 192, 186);
   font-size: 15px;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background-color: rgb(105, 165, 165);
 }
- .footer{
-  
+.footer {
   font-size: 10px;
   color: #fff;
 }
-button.favorite{
+button.favorite {
   width: 50px;
   height: 20px;
 }
- 
-

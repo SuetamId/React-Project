@@ -1,7 +1,6 @@
-//imports 
+//imports
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 
 // components
 import CharacterList from "./Components/CharacterList/CharacterList";
@@ -48,44 +47,39 @@ function App() {
   useEffect(() => {
     const scrollPage = () => {
       if (window.scrollY > 10) {
-        setBlackHeader(true)
+        setBlackHeader(true);
       } else {
-        setBlackHeader(false)
+        setBlackHeader(false);
       }
-    }
-    window.addEventListener('scroll', scrollPage)
+    };
+    window.addEventListener("scroll", scrollPage);
 
     return () => {
-      window.removeEventListener('scroll', scrollPage)
-    }
+      window.removeEventListener("scroll", scrollPage);
+    };
   }, []);
-  
-
-  
 
   return (
     <div className="container py-5">
       <Headers black={blackHeader} />
       <CharacterList characters={characters} />
       <div className="container pb-5">
-        <nav>
-          <ul className="pagination2">
-            {info.prev ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handlePreviousPage}>
-                  Anterior
-                </button>
-              </li>
-            ) : null}
-            {info.next ? (
-              <li className="page-item">
-                <button className="page-link" onClick={handleNextPage}>
-                  Proximo
-                </button>
-              </li>
-            ) : null}
-          </ul>
-        </nav>
+        <ul className="pagination2">
+          {info.prev ? (
+            <li className="page-item">
+              <button className="page-link" onClick={handlePreviousPage}>
+                Anterior
+              </button>
+            </li>
+          ) : null}
+          {info.next ? (
+            <li className="page-item">
+              <button className="page-link" onClick={handleNextPage}>
+                Proximo
+              </button>
+            </li>
+          ) : null}
+        </ul>
       </div>
       <footer>
         <div className="footer">
@@ -97,5 +91,3 @@ function App() {
 }
 
 export default App;
-
- 
